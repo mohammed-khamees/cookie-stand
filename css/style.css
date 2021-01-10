@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--mainColor: #f2d974;
+	--mainFontFamily: 'Yusei Magic', sans-serif;
+	--secondaryColor: #c7956d;
+	--thirdColor: #965d62;
+	--forthColor: #534e52;
+	--secondaryFontFamily: Georgia, 'Times New Roman', Times, serif;
+	--thirdFontFamily: Arial, Helvetica, sans-serif;
+	--letterSpacing: 0.8rem;
+	--mainTrasition: all 0.3s ease-in-out;
+}
+
+/* header */
+.banner {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url('https://images.pexels.com/photos/5702952/pexels-photo-5702952.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+			center/cover no-repeat fixed;
+	height: 100vh;
+	width: 100vw;
+	font-family: var(--mainFontFamily);
+	color: var(--mainColor);
+	font-size: 2.2rem;
+	letter-spacing: var(--letterSpacing);
+	position: relative;
+}
+
+.banner-title {
+	text-align: center;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	text-transform: capitalize;
+	color: var(--secondaryColor);
+}
+
+.first {
+	top: 25%;
+	color: var(--mainColor);
+}
+
+.banner-btn {
+	text-align: center;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	text-decoration: none;
+	color: var(--forthColor);
+	outline: 2px solid var(--thirdColor);
+	outline-offset: 0.5rem;
+	background-color: var(--thirdColor);
+	margin: 2rem 0;
+	padding: 1rem 1rem 1.5rem 1.8rem;
+	transition: var(--mainTrasition);
+}
+
+.banner-btn:hover {
+	background-color: var(--secondaryColor);
+}
+
+/* end of header */
+
+/* content divider */
+.content-divider {
+	height: 0.5rem;
+	background: linear-gradient(
+		to left,
+		var(--thirdColor),
+		var(--mainColor),
+		var(--thirdColor)
+	);
+}
+
+/* end of content divider */
+
+/* main */
+
+#aboutUs {
+	position: relative;
+}
+
+.aboutUs-title {
+	margin: 3rem auto;
+	color: var(--forthColor);
+	font-family: var(--mainFontFamily);
+	font-size: 3rem;
+	text-align: center;
+}
+
+.aboutUs-img {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.aboutUs-info {
+	max-width: 60rem;
+	color: var(--forthColor);
+	margin: 10rem auto 1rem;
+	text-align: justify;
+	line-height: 1.5rem;
+	text-indent: 0.2rem;
+	font-family: var(--secondaryFontFamily);
+	font-weight: bold;
+	background: var(--secondaryColor);
+	padding: 10rem 2rem 2rem 2rem;
+	border-radius: 1rem;
+	border: 0.5rem solid var(--forthColor);
+}
+
+.aboutUs-btn {
+	position: absolute;
+	top: 85%;
+	left: 90%;
+	text-decoration: none;
+	color: var(--forthColor);
+	background-color: var(--thirdColor);
+	margin: 2rem 0;
+	padding: 1rem 2rem;
+	transition: var(--mainTrasition);
+	font-size: 2rem;
+	border: 0.3rem solid var(--thirdColor);
+	border-radius: 1rem;
+	font-family: var(--thirdFontFamily);
+}
+
+.aboutUs-btn:hover {
+	background-color: var(--secondaryColor);
+	color: var(--mainColor);
+}
+
+/*end of main*/

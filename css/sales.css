@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--mainColor: #f2d974;
+	--mainFontFamily: 'Yusei Magic', sans-serif;
+	--secondaryColor: #c7956d;
+	--thirdColor: #965d62;
+	--forthColor: #534e52;
+	--secondaryFontFamily: Georgia, 'Times New Roman', Times, serif;
+	--thirdFontFamily: Arial, Helvetica, sans-serif;
+	--letterSpacing: 0.8rem;
+	--mainTrasition: all 0.3s ease-in-out;
+}
+
+/* clearfix */
+.clearfix::after,
+.clearfix::before {
+	content: '';
+	clear: both;
+	display: table;
+}
+/* header */
+.header {
+	height: 100px;
+	width: 100vw;
+	background: var(--secondaryColor);
+	box-shadow: 0px 9px 14px 6px rgba(0, 0, 0, 0.87);
+}
+
+.logo {
+	width: 9rem;
+	height: 3rem;
+	margin-top: 1.5rem;
+	margin-left: 8rem;
+}
+
+.nav {
+	float: right;
+	text-decoration: none;
+	color: var(--forthColor);
+	font-family: var(--mainFontFamily);
+	font-weight: bold;
+	font-size: 2rem;
+	margin-top: 1.5rem;
+	margin-right: 9rem;
+	letter-spacing: var(--letterSpacing);
+	transition: var(--mainTrasition);
+}
+
+.nav:hover {
+	color: var(--mainColor);
+}
+
+/* end of header */
+
+/* main */
+.cities {
+	margin-top: 5rem;
+	margin-left: 5rem;
+}
+
+.city {
+	float: left;
+	margin: 1rem;
+	color: var(--forthColor);
+	font-family: var(--mainFontFamily);
+	background: var(--thirdColor);
+	padding: 1rem 3rem;
+	border-radius: 1rem;
+	border: 0.3rem solid var(--thirdColor);
+	transition: var(--mainTrasition);
+	letter-spacing: 0.2rem;
+	width: 20rem;
+	text-align: center;
+}
+
+.city:hover {
+	background: white;
+	cursor: pointer;
+}
+
+.city h2 {
+	margin-bottom: 1rem;
+}
+
+.city li {
+	text-align: left;
+}
+
+.hidden {
+	display: none;
+}
+
+/*end of main*/
