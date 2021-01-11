@@ -60,41 +60,37 @@
 /* end of header */
 
 /* main */
-.cities {
-	margin-top: 5rem;
-	margin-left: 5rem;
+table,
+th,
+tr,
+td {
+	border: 1px solid var(--forthColor);
+	border-collapse: collapse;
+	color: var(--forthColor);
+	font-size: 1.3rem;
+	transition: var(--mainTrasition);
 }
 
-.city {
-	float: left;
-	margin: 1rem;
-	color: var(--forthColor);
-	font-family: var(--mainFontFamily);
+table {
+	margin: 10rem auto;
 	background: var(--thirdColor);
-	padding: 1rem 3rem;
-	border-radius: 1rem;
-	border: 0.3rem solid var(--thirdColor);
-	transition: var(--mainTrasition);
-	letter-spacing: 0.2rem;
-	width: 20rem;
+}
+
+tr,
+th,
+td {
+	padding: 1rem;
 	text-align: center;
 }
 
-.city:hover {
-	background: white;
+tr:hover {
+	background-color: var(--secondaryColor);
+}
+
+th:hover,
+td:hover {
+	background-color: var(--mainColor);
+	transform: scale(1.2);
 	cursor: pointer;
 }
-
-.city h2 {
-	margin-bottom: 1rem;
-}
-
-.city li {
-	text-align: left;
-}
-
-.hidden {
-	display: none;
-}
-
 /*end of main*/
