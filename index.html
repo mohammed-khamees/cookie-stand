@@ -5,12 +5,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/a24ea374e8.js" crossorigin="anonymous"></script>
+
+        <!-- style -->
         <link rel="stylesheet" href="css/style.css" />
+
     </head>
 
     <body>
+        <span class="nav-btn" id="nav-btn">
+            <i class="fa fa-bars"></i>
+        </span>
+        <nav class="nav">
+            <div class="icon icon-btn">
+                <i class="fas fa-times close"></i>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#contacts">Contact Us</a></li>
+            </ul>
+        </nav>
         <header class="banner">
-            <h2 class="banner-title first">Salmon Cookie</h2>
+            <h2 class="banner-title first">Salmon Cookie </h2>
             <h2 class="banner-title">Live an adventure in every bite</h2>
             <a href="#aboutUs" class="banner-btn">Explore</a>
         </header>
@@ -51,11 +71,77 @@
                         quisquam sit debitis amet voluptatum laudantium iure, animi officiis obcaecati tempora pariatur.
                     </p>
                 </div>
-                <a href="sales.html" class="aboutUs-btn">Sales</a>
             </div>
         </main>
-        <footer></footer>
+        <article id="services">
+            <h2 class="services-title">Our services</h2>
+            <div class="services clearfix">
+                <div class="service">
+                    <div class="icon">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                    <h4 class="service-title">Making fresh Cookie</h4>
+                    <p class="service-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut
+                        delectus in autem
+                        eveniet enim, officia ipsa consectetur neque aperiam?</p>
+                </div>
+                <div class="service">
+                    <div class="icon">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <h4 class="service-title">Great taste</h4>
+                    <p class="service-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut
+                        delectus in autem
+                        eveniet enim, officia ipsa consectetur neque aperiam?</p>
+                </div>
+                <div class="service">
+                    <div class="icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h4 class="service-title">Hot Cookies Delivery</h4>
+                    <p class="service-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut
+                        delectus in autem
+                        eveniet enim, officia ipsa consectetur neque aperiam?</p>
+                </div>
+            </div>
+        </article>
+        <div class="content-divider"></div>
+        <article id="contacts">
+            <h2 class="contacts-title">Contact Us</h2>
+            <div class="contacts clearfix">
+                <div class="contact-info">
+                    <div class="info"><i class="fas fa-map-marker-alt icon"></i> <span class="contact">1st Circle, Amman
+                            -Jordan</span></div>
+                    <div class="info"><i class="fas fa-phone-alt icon"></i> <span class="contact">+962853232323</span>
+                    </div>
+                    <div class="info"><i class="far fa-envelope icon"></i> <span
+                            class="contact">salmon-cookies@cookie.com</span></div>
+                    <div class="info"><i class="fas fa-clock icon"></i> <span class="contact">Opening Hours: 6am -
+                            8pm</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form method="POST">
+                        <label for="name">Your Name: </label>
+                        <input type="text" name="name" placeholder="first and last Name" id="name">
+                        <label for="emal">Your E-mail: </label>
+                        <input type="email" name="email" placeholder="E-mail" id="email">
+                        <label for="comment">Message: </label>
+                        <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Your Message"></textarea>
+                    </form>
+                </div>
+            </div>
+        </article>
+        <footer class="footer">
+            <div class="icons">
+                <a href="https://www.facebook.com/" target="_blank"> <i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter"></i></a>
+            </div>
+            <p>Salmon Cookies; All Copy Right &copy; Reserved</p>
+        </footer>
         <script src="js/app.js"></script>
+        <script src="js/navbar.js"></script>
     </body>
 
 </html>
