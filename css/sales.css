@@ -94,3 +94,30 @@ td:hover {
 	cursor: pointer;
 }
 /*end of main*/
+
+/* footer */
+.footer {
+	font-size: 1.5rem;
+	color: var(--secondaryColor);
+	text-align: center;
+	background-color: var(--forthColor);
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	margin-top: 5rem;
+}
+
+.icons {
+	margin-bottom: 2rem;
+}
+
+.icons a {
+	color: var(--secondaryColor);
+	margin-right: 2rem;
+	transition: var(--mainTrasition);
+}
+
+.icons a:hover {
+	color: var(--thirdColor);
+}
+
+/* end of footer */
