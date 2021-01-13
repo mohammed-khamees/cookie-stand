@@ -33,7 +33,7 @@ const maxMinCustomer = [
 	{ city: 'lima', minCustomer: 2, maxCustomer: 16, average: 4.6 },
 ];
 
-const totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 const Location = function (
 	minCustomerPerHour,
@@ -130,6 +130,7 @@ addBtn.addEventListener('click', (e) => {
 	maxMinCustomer.push(newCity);
 	const tableOfContent = document.querySelector('table');
 	tableOfContent.innerHTML = '';
+	totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 	resultSales();
 });
 
