@@ -94,9 +94,7 @@ Location.prototype.render = function (numberOfPurchasedCookies, location) {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-	table();
 	resultSales();
-	totalRow();
 });
 
 btn.addEventListener('click', () => {
@@ -132,12 +130,10 @@ addBtn.addEventListener('click', (e) => {
 	maxMinCustomer.push(newCity);
 	const tableOfContent = document.querySelector('table');
 	tableOfContent.innerHTML = '';
-	table();
 	resultSales();
-	totalRow();
 });
 
-function table() {
+function resultSales() {
 	cities.appendChild(tableOfContent);
 	const tableHeaderRow = document.createElement('tr');
 	tableOfContent.appendChild(tableHeaderRow);
@@ -146,9 +142,7 @@ function table() {
 		tableHeaderItem.textContent = times[i - 1];
 		tableHeaderRow.appendChild(tableHeaderItem);
 	}
-}
 
-function resultSales() {
 	maxMinCustomer.forEach((location) => {
 		let { city, minCustomer, maxCustomer, average } = location;
 		const cityName = city;
@@ -157,9 +151,7 @@ function resultSales() {
 		city.purchasedCookiesPerHour();
 		city.render(city.numberOfPurchasedCookies, cityName);
 	});
-}
 
-function totalRow() {
 	const TotalsRow = document.createElement('tr');
 	tableOfContent.appendChild(TotalsRow);
 	for (let i = 0; i < 16; i++) {
