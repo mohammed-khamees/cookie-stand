@@ -60,6 +60,20 @@
 /* end of header */
 
 /* main */
+
+main {
+	position: relative;
+	height: auto;
+}
+
+.main-bg {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.table-appeare {
+	opacity: 0.7;
+}
+
 table,
 th,
 tr,
@@ -72,7 +86,7 @@ td {
 }
 
 table {
-	margin: 10rem auto;
+	margin: 10rem auto 4rem;
 	background: var(--thirdColor);
 }
 
@@ -83,16 +97,129 @@ td {
 	text-align: center;
 }
 
+th {
+	text-transform: capitalize;
+}
+
 tr:hover {
 	background-color: var(--secondaryColor);
 }
 
-th:hover,
 td:hover {
 	background-color: var(--mainColor);
 	transform: scale(1.2);
 	cursor: pointer;
 }
+
+.no-color:hover {
+	background-color: var(--thirdColor);
+}
+
+.btn-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.btn {
+	padding: 0.8rem 2.1rem;
+	background: var(--secondaryColor);
+	color: var(--forthColor);
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: 2px solid var(--forthColor);
+	letter-spacing: 0.1rem;
+	transition: var(--mainTrasition);
+	border-radius: 2rem;
+}
+
+.btn:hover {
+	cursor: pointer;
+	background-color: transparent;
+	color: var(--thirdColor);
+	border: 2px solid var(--thirdColor);
+}
+
+.add-city {
+	margin: 0 auto;
+	border: 3px solid var(--thirdColor);
+	width: 50%;
+	border-radius: 5rem;
+	display: none;
+	background: var(--secondaryColor);
+	transition: var(--mainTrasition);
+	padding: 2rem 0 0 0;
+}
+
+.icon {
+	font-size: 2rem;
+	color: var(--thirdColor);
+	float: right;
+	transform: translateX(-3rem);
+}
+
+.icon:hover {
+	cursor: pointer;
+	color: red;
+}
+
+.show {
+	display: block;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+}
+
+label,
+input {
+	display: block;
+	text-align: center;
+	margin-bottom: 1rem;
+	font-family: var(--mainFontFamily);
+	border: none;
+}
+
+label {
+	font-size: 1.2rem;
+	color: var(--thirdColor);
+	font-weight: bold;
+}
+
+input {
+	padding: 1rem 3rem 1rem 1rem;
+	background: rgb(161, 161, 161);
+	border-radius: 2rem;
+	margin: 0 auto 1rem;
+}
+
+input {
+	width: 18rem;
+	color: var(--forthColor);
+	font-size: 1.2rem;
+}
+
+input::placeholder {
+	text-align: left;
+	color: white;
+	font-size: small;
+	letter-spacing: 0.15rem;
+}
+
+.add-city .btn-container {
+	margin: 2rem 0;
+}
+
+.add-city .btn-container .btn {
+	background-color: var(--thirdColor);
+	color: var(--mainColor);
+}
+
+.add-city .btn-container .btn:hover {
+	background-color: transparent;
+	color: var(--thirdColor);
+}
+
 /*end of main*/
 
 /* footer */
@@ -104,6 +231,7 @@ td:hover {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 	margin-top: 5rem;
+	width: 100vw;
 }
 
 .icons {

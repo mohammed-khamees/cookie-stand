@@ -5,7 +5,7 @@ const closeBtn = document.querySelector('.close');
 const nav = document.querySelector('.nav');
 
 navBtn.addEventListener('click', () => {
-	nav.classList.add('nav-click');
+	nav.classList.toggle('nav-click');
 });
 
 closeBtn.addEventListener('click', () => {
