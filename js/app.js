@@ -6,6 +6,9 @@ const addCity = document.querySelector('.add-city');
 const addBtn = document.querySelector('.add');
 const main = document.querySelector('main');
 const footer = document.querySelector('footer');
+const emptyField = document.getElementById('empty');
+const existCity = document.getElementById('exist');
+const minMaxField = document.getElementById('minMax');
 
 const times = [
 	'6:00am',
@@ -32,6 +35,8 @@ const maxMinCustomer = [
 	{ city: 'paris', minCustomer: 20, maxCustomer: 38, average: 2.3 },
 	{ city: 'lima', minCustomer: 2, maxCustomer: 16, average: 4.6 },
 ];
+
+const locationNames = ['seattle', 'tokyo', 'dubai', 'paris', 'lima'];
 
 let totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
@@ -111,6 +116,9 @@ close.addEventListener('click', () => {
 	tableOfContent.classList.remove('table-appeare');
 	footer.classList.remove('table-appeare');
 	btn.style.display = 'block';
+	emptyField.textContent = '';
+	existCity.textContent = '';
+	minMaxField.textContent = '';
 });
 
 addBtn.addEventListener('click', (e) => {
@@ -127,11 +135,28 @@ addBtn.addEventListener('click', (e) => {
 		maxCustomer: Number(max.value),
 		average: Number(averageCookies.value),
 	};
-	maxMinCustomer.push(newCity);
-	const tableOfContent = document.querySelector('table');
-	tableOfContent.innerHTML = '';
-	totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-	resultSales();
+	let { city, minCustomer, maxCustomer, average } = newCity;
+	if (city === '' || minCustomer === 0 || maxCustomer === 0 || average === 0) {
+		emptyField.textContent =
+			'please fill the input fields to add the location to the table!';
+		minMaxField.textContent = '';
+		existCity.textContent = '';
+	} else if (locationNames.includes(city)) {
+		existCity.textContent = 'The City is Already Exist';
+		emptyField.textContent = '';
+		minMaxField.textContent = '';
+	} else if (minCustomer > maxCustomer) {
+		minMaxField.textContent = 'The min Customer Must Be less than max Customer';
+		existCity.textContent = '';
+		emptyField.textContent = '';
+	} else {
+		maxMinCustomer.push(newCity);
+		locationNames.push(city);
+		const tableOfContent = document.querySelector('table');
+		tableOfContent.innerHTML = '';
+		totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+		resultSales();
+	}
 });
 
 function resultSales() {
