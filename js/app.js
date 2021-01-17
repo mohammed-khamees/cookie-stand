@@ -164,9 +164,9 @@ addBtn.addEventListener('click', (e) => {
 		locationNames.push(city);
 		const tableOfContent = document.querySelector('table');
 		tableOfContent.innerHTML = '';
-		existCity.textContent = '';
-		minMaxField.textContent = '';
-		emptyField.textContent = '';
+		existCity.innerHTML = '';
+		minMaxField.innerHTML = '';
+		emptyField.innerHTML = '';
 		totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 		resultSales();
 	}
