@@ -146,9 +146,19 @@ addBtn.addEventListener('click', (e) => {
 		emptyField.textContent = '';
 		minMaxField.textContent = '';
 	} else if (minCustomer > maxCustomer) {
-		minMaxField.textContent = 'The min Customer Must Be less than max Customer';
+		minMaxField.textContent =
+			'The min Customer Must Be less than max Customer and numbers';
 		existCity.textContent = '';
 		emptyField.textContent = '';
+	} else if (
+		Object.is(minCustomer, NaN) ||
+		Object.is(maxCustomer, NaN) ||
+		Object.is(average, NaN)
+	) {
+		emptyField.textContent =
+			'The min Customer, max Customer and average must be numbers';
+		existCity.textContent = '';
+		minMaxField.textContent = '';
 	} else {
 		maxMinCustomer.push(newCity);
 		locationNames.push(city);
