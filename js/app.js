@@ -160,13 +160,13 @@ addBtn.addEventListener('click', (e) => {
 		existCity.textContent = '';
 		minMaxField.textContent = '';
 	} else {
-		existCity.textContent = '';
-		minMaxField.textContent = '';
-		emptyField.textContent = '';
 		maxMinCustomer.push(newCity);
 		locationNames.push(city);
 		const tableOfContent = document.querySelector('table');
 		tableOfContent.innerHTML = '';
+		existCity.textContent = '';
+		minMaxField.textContent = '';
+		emptyField.textContent = '';
 		totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 		resultSales();
 	}
